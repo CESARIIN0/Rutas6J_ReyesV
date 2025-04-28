@@ -1,108 +1,100 @@
 import 'package:flutter/material.dart';
 
-class SegundaPantalla extends StatelessWidget {
-  const SegundaPantalla({super.key});
+class PantallaUno extends StatelessWidget {
+  const PantallaUno({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF37474F),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF263238),
-        titleTextStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
-          fontSize: 20,
-        ),
-        title: const Text('2da pantalla'),
+        title: const Text('Pantalla Uno',
+            style: TextStyle(color: Colors.white, fontSize: 32)),
+        backgroundColor: Colors.indigo, // Un tono más serio de azul
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: ElevatedButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/pantalla2');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: const Color(0xFF263238),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                elevation: 5,
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
               ),
-              child: const Text(
-                'Volver a la 1ra',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-              ),
+              child: const Text('Ver Pantalla Dos'),
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
+          ),
+          const SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/tercera');
+                Navigator.pushNamed(context, '/pantalla3');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: const Color(0xFF263238),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                elevation: 5,
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
               ),
-              child: const Text(
-                'Ir a la 3ra pantalla',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              child: const Text('Ver Pantalla Tres'),
+            ),
+          ),
+          const SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pantalla4');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
               ),
+              child: const Text('Ver Pantalla Cuatro'),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class TercerPantalla extends StatelessWidget {
-  const TercerPantalla({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF37474F),
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF263238),
-        titleTextStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
-          fontSize: 20,
-        ),
-        title: const Text('3er pantalla'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-            foregroundColor: const Color(0xFF263238),
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+          ),
+          const SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pantalla5');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Ver Pantalla Cinco'),
             ),
-            elevation: 5,
           ),
-          child: const Text(
-            'Volver',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+          const SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pantalla6');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Ver Pantalla Seis'),
+            ),
           ),
-        ),
+          const SizedBox(
+              height:
+                  20), // <- Agrego espacio también aquí para que se vea bien
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/pantalla7');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Ver Pantalla Siete'),
+            ),
+          ),
+        ],
       ),
     );
   }
